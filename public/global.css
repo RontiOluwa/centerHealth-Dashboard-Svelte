@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    text-decoration: none;
+}
+
+/* Style Scroll Bar */
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #eee; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #eee; 
+}
+
+/* Header CSS */
+
+.header{
+    background-image: linear-gradient(to bottom,#0af,#acfffd 200px);
+    color: #fff;
+    z-index: 10000;
+    height: 140px;   
+}
+.header .container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.nav{
+    padding: 10px 0;
+}
+.nav a:hover{
+    background-color: rgba(0,0,0,.15);
+    border-radius: 20px;
+}
+.disabled-text:hover{
+    background-color: inherit !important;  
+}
+.nav-left{
+    font-size: 0;
+    float: left;
+    margin-left: -20px;
+    list-style-type: none;
+}
+.nav-left li {
+    margin-right: 5px;
+    display: inline-block;
+}
+.nav-left a{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all .2s;
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.nav-left .active {
+    background-color: rgba(0,0,0,.15);
+    border-radius: 20px;
+}
+.nav-left .team::after{
+    content: 'New!';
+    position: absolute;
+    top: 0;
+    right: -25px;
+    background-color: #2ecc71;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 2px 5px 0;
+    border-radius: 8px;
+}
+.disabled-text{
+    margin-left: 25px;
+    opacity: .6;
+    cursor:default !important;
+}
+.nav-right{
+    float: right;
+    display: flex;
+    margin-right: -15px;
+}
+.nav-right li{
+    list-style: none;
+}
+.nav-right a{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all .2s;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+.insight::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 6px;
+    right: 8px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+}
+.insight:hover .insight-tooltiptext{
+    visibility: visible;
+}
+.tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    top: 120%;
+    left: 50%;
+    margin-left: -100px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 7px;
+    border-radius: 20px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+.messages{
+    height: 42px;
+    width: 42px;
+    margin: -3px 6px -3px 0;
+    vertical-align: top;
+    border-radius: 50%;
+}
+.messages::before{
+    position: absolute;
+    top: 50%;
+    height: 24px;
+    margin-top: -10px;
+    background-position: -24px -48px;
+    background-repeat: no-repeat;
+    opacity: .8;
+    content: '';
+    width: 24px;
+    margin-left: -12px;
+    background-image: url('https://www.center.health/assets/images/app/form-sprite.a8e379f4.png');
+    left: 50%;
+    background-size: 48px auto;
+}
+.setting{
+    border-radius: 18px;
+}
+.setting img {
+    vertical-align: top;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+.username{
+    padding: 7px 35px 10px 10px;
+    display: inline-block;
+    position: relative;
+}
+.top-title{
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 60px;
+    padding-left: 20px;
+    margin-left: -23px;
+    border-left: 1px solid rgba(255,255,255,.2);
+    position: relative;
+}
+.online{
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    top: -4px;
+    left: -60px;
+    height: 40px;
+    width: 40px;
+    background-image: url('https://www.center.health/assets/images/branding/icon-80x80-light.fc30638c.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+}
+.page-title{
+    font-size: 32px;
+    font-weight: 400;
+}
+.add-event{
+    right: 184px;
+    background-color: #f7f7f7;
+    top: 100px;
+    height: 72px;
+    cursor: pointer;
+    width: 72px;
+    z-index: 10000;
+    position: absolute;
+    border-radius: 50%;
+}
+.add-event::before{
+    content: '';
+    top: 6px;
+    left: 6px;
+    height: 60px;
+    width: 60px;
+    transition: all .2s;
+    background-color: #1ab2ff;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 15%);
+    border-radius: 50%;
+    position: absolute;
+}
+.add-event::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -11px;
+    margin-left: -11px;
+    background-position: -22px -132px;
+    height: 22px;
+    width: 22px;
+    background-size: 66px auto;
+    background-image: url('https://www.center.health/assets/images/app/action-sprite.35b8c8ee.png');
+    background-repeat: no-repeat;
+    content: '';
+}
+
+/* Body CSS */
+.main-container{
+    padding: 60px 40px 30px;
+    box-shadow: 0 0 30px rgb(0 0 0 / 10%);
+    background-color: #f7f7f7;
+    height: 100vh;
+}
+.section{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    transition: max-width .2s;
+}
+.section-top{
+    background-color: #f7f7f7;
+    width: 100%;
+    box-shadow: 0 2px 4px transparent;
+    box-sizing: border-box;
+}
+.date-options{
+    float: right;
+    position: relative;
+    margin-top: -12px;
+}
+.date-options ul{
+    margin: 5px 0 0;
+    padding: 0 0 15px;
+    list-style-type: none;
+    white-space: nowrap;
+}
+.date-options ul li{
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 2px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px 20px 7px;
+    background-color: transparent;
+    color: #656b73;
+    border-radius: 16px;
+    transition: all .2s;
+}
+.active-date{
+    background-color: #1ab2ff !important;
+    color: #fff !important;
+    border-radius: 21px !important;
+}
+.date-options .active-date:hover{
+    background-color: #1ab2ff !important;
+}
+.date-options li:hover{
+    background-color: #e6e6e6 !important;
+    border-radius: 21px !important;
+}
+.date-text{
+    float: left;
+    margin-top: 8px;
+    color: #656b73;
+    font-size: 28px;
+    width: 290px;
+    margin-right: 10px;
+}
+.date-shift{
+    float: left;
+    margin-top: -5px;
+    transition: opacity .2s;
+}
+.date-shift .previous{
+    margin-right: 5px;
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    transition: background-color .2s;
+    cursor: pointer;
+}
+.previous::before{
+    background-position: left -60px;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 20px;
+    width: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    background-image: url('https://www.center.health/assets/images/app/action-sprite.35b8c8ee.png');
+    background-repeat: no-repeat;
+    background-size: 60px auto;
+    opacity: .25;
+}
+.date-shift .next{
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    transition: background-color .2s;
+}
+.next::before{
+    background-position: left -20px;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 20px;
+    width: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    background-image: url('https://www.center.health/assets/images/app/action-sprite.35b8c8ee.png');
+    background-repeat: no-repeat;
+    background-size: 60px auto;
+    opacity: .25;
+}
+
+/* Card CSS */
+.card-section{
+    display: flex;
+    width: calc(83% + 20px);
+    margin: auto;
+}
+.card{
+    float: left;
+    width: calc(33.333% - 20px);
+    margin: 20px 10px 20px;
+    padding: 10px 12px;
+    color: #656b73;
+    text-align: right;
+    position: relative;
+    height: 115px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 15%)
+}
+.card-value::before{
+    background-color: #2e7d2da8;
+    margin-top: -5px;
+    left: -20px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: 30%;
+}
+.card-text{
+    font-size: 17px;
+    font-weight: 600;
+    padding-top: 1px;
+    padding-left: 22px;
+    margin-bottom: 11px;
+    position: relative;
+    text-align: left;
+}
+.card-text::before{
+    background-position: left top;
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -6px;
+    height: 24px;
+    width: 24px;
+    opacity: .2;
+    background-size: 72px auto;
+    background-repeat: no-repeat;
+    background-image: url('https://www.center.health/assets/images/app/event-sprite.eed913fa.png');
+}
+.card-value{
+    font-size: 40px;
+    display: inline-block;
+    position: relative;
+}
+.card-data{
+    font-size: 42px;
+    margin-top: -15px;
+}
+.unit{
+    font-size: 16px;
+    font-weight: 600;
+}
+.card-date{
+    color: #999ea5;
+    margin-top: -11px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: opacity .2s;
+}
+.success{
+    color: #2ecc71;
+}
+.warning{
+    color: #f39c12;
+}
+
+/* Modal */
+
+.back-drop{
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+    padding: 30px 40px 0;
+    border-radius: 25px;
+    max-width: 400px;
+    height: 350px;
+    margin: 12% auto;
+    text-align: center;
+    position: relative;
+    background: #fff;
+}
+.close-modal{
+    position: absolute;
+    top: -22px;
+    right: -22px;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #7e848d;
+    transition: background-color .2s;
+}
+.close-modal::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 16px;
+    width: 16px;
+    margin-top: -8px;
+    margin-left: -8px;
+    background-image: url('https://www.center.health/assets/images/app/action-sprite.35b8c8ee.png');
+    background-position: -16px -64px;
+    background-size: 48px auto;
+    background-repeat: no-repeat;
+    content: '';
+}
+.modal-body{
+    height: 100%;
+    font-size: 26px;
+    color: #656b73;
+    text-align: center;
+}
+.back-Btn{
+    left: 18px;
+    position: absolute;
+    top: 32px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transition: background-color .2s;
+}
+.back-Btn::before{
+    background-image: url('https://www.center.health/assets/images/app/action-sprite.35b8c8ee.png');
+    background-size: 66px auto;
+    background-position: left -66px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 22px;
+    width: 22px;
+    margin-top: -11px;
+    margin-left: -11px;
+    background-repeat: no-repeat;
+    opacity: .2;
+    content: '';
+}
+.top span{
+    font-weight: 600;
+}
+.set-date{
+    display: inline-block;
+    padding: 10px;
+    height: 46px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+.day{
+    padding-right: 25px;
+    float: left;
+    font-size: 26px;
+    border-right: 1px solid #d3d7db;
+}
+.time{
+    padding-left: 25px;
+    float: left;
+    font-size: 26px;
+}
+.icons ul {
+    position: relative;
+    margin: 10px 0 0;
+    list-style-type: none;
+    width: 100%;
+    float: right;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #d3d7db;
+    font-size: 10;
+}
+.icons ul li{
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    transition: all .2s;
+    position: relative;
+    overflow: hidden;
+    margin: 0 2px;
+}
+.icons ul li a{
+    margin-top: 5px;
+    color: #656b73;
+}
+.icons ul li:hover{
+    cursor: pointer;
+    background-color: #d3d7db;
+    border-radius: 50%;
+}
+
+.modal-body button{
+    z-index: 10007;
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    border: none;
+    background-color: #1ab2ff;
+    transition: all .2s;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 15%);
+    font-size: 0;
+}
+
+.modal-body button::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 22px;
+    width: 22px;
+    margin-top: -11px;
+    margin-left: -11px;
+    background-image: url('https://www.center.health/assets/images/app/action-sprite.35b8c8ee.png');
+    background-repeat: no-repeat;
+    background-size: 66px auto;
+    background-position: -22px -110px;
+}
+
+/* Media Query */
+@media only screen and (max-width: 1464px   ) {
+    .top-title {
+        position: initial;
+    }
+    .nav-left{
+        margin-left: 30px;
+    }
+    .page-title{
+        margin-left: 30px;
+    }
+}
+
+@media only screen and (max-width: 1055px   ) {
+    .card-section {
+        display: block;
+    }
+    .card{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 860px   ) {
+    .nav {
+        display: none;
+    }
+    .top-title{
+        margin-top: 0px;
+    }
+    .header{
+        height: 60px;
+    }
+    .page-title{
+        padding: 6px;
+    }
+    .add-event{
+        top: 30px;
+        right: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 784px) {
+    .date-options{
+        float: left;
+        position: initial;
+        margin-left: -19px;
+        max-width: 100%;
+        overflow: scroll;
+    }
+}
+  
